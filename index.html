@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Palak Sudoku</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://image.flaticon.com/icons/png/128/5190/5190808.png"
+		/>
+		<script src="script.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<button id="easy-btn" onclick="easy()" disabled="">Easy</button>
+		<button id="medium-btn" onclick="medium()">Medium</button>
+		<button id="hard-btn" onclick="hard()">Hard</button>
+
+		<table>
+			<tbody>
+				<!-- row-1 -->
+				<tr>
+					<td>
+						<input type="number" class="row-1 column-1 box-1" id="c00" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-2 box-1" id="c01" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-3 box-1" id="c02" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-4 box-2" id="c03" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-5 box-2" id="c04" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-6 box-2" id="c05" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-7 box-3" id="c06" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-8 box-3" id="c07" />
+					</td>
+					<td>
+						<input type="number" class="row-1 column-9 box-3" id="c08" />
+					</td>
+				</tr>
+
+				<!-- row-2 -->
+				<tr>
+					<td>
+						<input type="number" class="row-2 column-1 box-1" id="c10" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-2 box-1" id="c11" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-3 box-1" id="c12" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-4 box-2" id="c13" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-5 box-2" id="c14" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-6 box-2" id="c15" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-7 box-3" id="c16" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-8 box-3" id="c17" />
+					</td>
+					<td>
+						<input type="number" class="row-2 column-9 box-3" id="c18" />
+					</td>
+				</tr>
+
+				<!-- row-3 -->
+				<tr>
+					<td>
+						<input type="number" class="row-3 column-1 box-1" id="c20" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-2 box-1" id="c21" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-3 box-1" id="c22" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-4 box-2" id="c23" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-5 box-2" id="c24" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-6 box-2" id="c25" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-7 box-3" id="c26" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-8 box-3" id="c27" />
+					</td>
+					<td>
+						<input type="number" class="row-3 column-9 box-3" id="c28" />
+					</td>
+				</tr>
+
+				<!-- row-4 -->
+				<tr>
+					<td>
+						<input type="number" class="row-4 column-1 box-4" id="c30" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-2 box-4" id="c31" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-3 box-4" id="c32" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-4 box-5" id="c33" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-5 box-5" id="c34" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-6 box-5" id="c35" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-7 box-6" id="c36" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-8 box-6" id="c37" />
+					</td>
+					<td>
+						<input type="number" class="row-4 column-9 box-6" id="c38" />
+					</td>
+				</tr>
+				<!-- row-5 -->
+				<tr>
+					<td>
+						<input type="number" class="row-5 column-1 box-4" id="c40" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-2 box-4" id="c41" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-3 box-4" id="c42" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-4 box-5" id="c43" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-5 box-5" id="c44" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-6 box-5" id="c45" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-7 box-6" id="c46" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-8 box-6" id="c47" />
+					</td>
+					<td>
+						<input type="number" class="row-5 column-9 box-6" id="c48" />
+					</td>
+				</tr>
+
+				<!-- row-6 -->
+				<tr>
+					<td>
+						<input type="number" class="row-6 column-1 box-4" id="c50" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-2 box-4" id="c51" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-3 box-4" id="c52" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-4 box-5" id="c53" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-5 box-5" id="c54" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-6 box-5" id="c55" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-7 box-6" id="c56" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-8 box-6" id="c57" />
+					</td>
+					<td>
+						<input type="number" class="row-6 column-9 box-6" id="c58" />
+					</td>
+				</tr>
+
+				<!-- row-7 -->
+				<tr>
+					<td>
+						<input type="number" class="row-7 column-1 box-7" id="c60" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-2 box-7" id="c61" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-3 box-7" id="c62" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-4 box-8" id="c63" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-5 box-8" id="c64" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-6 box-8" id="c65" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-7 box-9" id="c66" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-8 box-9" id="c67" />
+					</td>
+					<td>
+						<input type="number" class="row-7 column-9 box-9" id="c68" />
+					</td>
+				</tr>
+
+				<!-- row-8 -->
+				<tr>
+					<td>
+						<input type="number" class="row-8 column-1 box-7" id="c70" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-2 box-7" id="c71" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-3 box-7" id="c72" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-4 box-8" id="c73" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-5 box-8" id="c74" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-6 box-8" id="c75" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-7 box-9" id="c76" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-8 box-9" id="c77" />
+					</td>
+					<td>
+						<input type="number" class="row-8 column-9 box-9" id="c78" />
+					</td>
+				</tr>
+
+				<!-- row-9 -->
+				<tr>
+					<td>
+						<input type="number" class="row-9 column-1 box-7" id="c80" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-2 box-7" id="c81" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-3 box-7" id="c82" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-4 box-8" id="c83" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-5 box-8" id="c84" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-6 box-8" id="c85" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-7 box-9" id="c86" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-8 box-9" id="c87" />
+					</td>
+					<td>
+						<input type="number" class="row-9 column-9 box-9" id="c88" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button id="validate-btn" onclick="validateAll()">Validate</button>
+	</body>
+</html>
